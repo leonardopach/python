@@ -4,11 +4,11 @@ print(sum([1, 2, 3]))
 
 def fibonacci2(limite):
     resultado = [0, 1]
-    while resultado[-1] < limite:
+    for _ in range(2, limite):
         resultado.append(sum(resultado[-2:]))
     return resultado
 
 
 if __name__ == "__main__":
-    for fib in fibonacci2(20000):
+    for fib in fibonacci2(20):
         print(f"{fib}", end=",")
