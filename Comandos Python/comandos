@@ -1,0 +1,10 @@
+pip list - lista os pacotes instalados
+pip install - instala um pacote
+pip uninstall - desistala um pacote
+pip freeze > requirements.txt - Cria um txt dos pacotes instalados
+pip install -r requirements.txt - baixa os pacotes dentro do requirements
+pip uninstall -y (pip freeze) - desistala todos os pacotes listado no freeze
+pip list --outdated - lista pacontes desatualizado
+python -m venv (nome ambiente) - cria um ambiente
+.venv\scripts\activate - entra no ambiente
+deactivate - sai do ambiente
