@@ -1,0 +1,5 @@
+nome = input("Digite seu nome aqui: ")
+altura = input("Qual sua Altura: ")
+peso = input("Qual seu Peso: ")
+imc = float(peso) / (float(altura) ** 2)
+print(f"Meu nome é: {nome}, tenho {altura} altura e meu IMC é: {imc:.3f}")
