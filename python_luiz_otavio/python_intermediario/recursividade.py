@@ -7,5 +7,6 @@ def calcular_fatorial(numero):
 
 # Exemplo de uso:
 numero = 5
+
 fatorial = calcular_fatorial(numero)
 print(f"O fatorial de {numero} é {fatorial}")
