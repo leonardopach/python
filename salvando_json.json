@@ -1,0 +1,17 @@
+[
+ {
+  "nome": "Leonardo",
+  "idade": 25,
+  "endereco": "Rua tal"
+ },
+ {
+  "nome": "Pedro",
+  "idade": 15,
+  "endereco": "Rua x"
+ },
+ {
+  "nome": "Gabriela",
+  "idade": 23,
+  "endereco": "Rua y"
+ }
+]
