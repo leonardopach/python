@@ -1,0 +1,17 @@
+Error: qualquer coisa(LogFileMixin)
+success: show(LogFileMixin)
+Error: Deu algum problema aqui(LogFileMixin)
+success: deu certo por aqui(LogFileMixin)
+success: Galaxy S está ligado(Smartphone)
+success: Galaxy S está desligado(Smartphone)
+success: iphone está desligado(Smartphone)
+success: Galaxy S está ligado(Smartphone)
+success: Galaxy S está desligado(Smartphone)
+success: iphone está desligado(Smartphone)
+success: Galaxy S está ligado(Smartphone)
+success: Galaxy S está desligado(Smartphone)
+success: iphone está desligado(Smartphone)
+success: Galaxy S está ligado(Smartphone)
+success: Galaxy S está desligado(Smartphone)
+success: iphone está desligado(Smartphone)
+
