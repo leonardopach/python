@@ -36,4 +36,6 @@ c1.falar_nome_classe()
 a1 = Aluno('Maria', 'Helena')
 a1.falar_nome_classe()
 print(a1.cpf)
+print(a1.cpf)
+
 # help(Cliente)
