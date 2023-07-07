@@ -14,7 +14,6 @@ def levantar():
 
 
 try:
-    1/0
     levantar()
 except (MeuErro, ZeroDivisionError) as erro:
     print(erro.__class__.__name__)
