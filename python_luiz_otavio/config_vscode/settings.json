@@ -1,22 +1,49 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.sortImports": true
-    },
-    "python.defaultInterpreterPath": "python",
-    "editor.formatOnSave": true,
-    "code-runner.clearPreviousOutput": true,
+    "python.formatting.provider": "none",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.fontSize": 13,
+    "editor.hover.enabled": true,
+    "workbench.startupEditor": "none",
     "explorer.compactFolders": false,
-    "code-runner.runInTerminal": true,
-    "code-runner.executorMap": {
-        "python": "clear ; python3 -u",
-    },
-    "code-runner.ignoreSelection": true,
-    "editor.autoClosingQuotes": "always",
-    "[python]": {
-        "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.autopep8"
-    },
+    "terminal.integrated.fontSize": 12,
     "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+    "workbench.iconTheme": "material-icon-theme",
+    "code-runner.executorMap": {
+        "python": "clear ; python -u"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.ignoreSelection": true,
+    "editor.fontFamily": "'MesloLGS NF',Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+    "terminal.integrated.fontFamily": "",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.fixAll.unusedImports": true,
+            "source.organizeImports": true
+        }
+    },
+    "python.languageServer": "Pylance",
+    "python.formatting.autopep8Args": [
+        "--indent-size=4",
+        "--max-line-length=80"
+        // "--ignore=E111"
+    ],
+    "python.linting.flake8Args": [
+        "--ignore=E111",
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.diagnosticSeverityOverrides": {},
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.enabled": false
 }
