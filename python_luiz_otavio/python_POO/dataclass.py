@@ -1,10 +1,14 @@
-from dataclasses import asdict, astuple, dataclass
+from dataclasses import asdict, astuple, dataclass, field
 
 
 @dataclass
 class Pessoa:
-    nome: str
-    sobrenome: str
+    nome: str = field(
+        default="Missing", repr=False
+    )
+    sobrenome: str = "not sent"
+    idade: int = 100
+    endereco: list[str] = field(default_factory=list)
 
     @property
     def nome_completo(self):
@@ -18,9 +22,7 @@ class Pessoa:
 
 
 if __name__ == '__main__':
-    p1 = Pessoa("Leonardo", "Pacheco")
-    p2 = Pessoa("Leonardo", "23")
-    print(p1 == p2)
+    p1 = Pessoa()
     print(p1)
     print(asdict(p1).values())
     print(asdict(p1).keys())
