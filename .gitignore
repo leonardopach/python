@@ -2,5 +2,6 @@
 _pycache__/
 .venv/
 venv/
-_pycache__
 .mypy_cache/
+.env
+__pycache__
