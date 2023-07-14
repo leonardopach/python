@@ -21,9 +21,9 @@ cursor.executemany(sql, (
 # usando dicionario
 sql_dict = (f'INSERT INTO {TABLE_NAME}'
             '(name, weight)'
-            'VALUES (:nome, :weight)')
+            'VALUES (:name, :weight)')
 
-cursor.execute(sql, {'nome': 'silva', 'weight': 4})
+cursor.execute(sql, {'name': 'silva', 'weight': 4})
 
 con.commit()
 
