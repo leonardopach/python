@@ -2,6 +2,7 @@ import os
 
 import dotenv
 import pymysql
+import pymysql.cursors
 
 dotenv.load_dotenv()
 TABLE_NAME = "customers"
@@ -10,12 +11,13 @@ connection = pymysql.connect(
     user=os.environ['MYSQL_USER'],
     password=os.environ['MYSQL_PASSWORD'],
     database=os.environ['MYSQL_DATABASE'],
+    cursorclass=pymysql.cursors.DictCursor
 )
 
 print(os.environ['MYSQL_USER'])
 with connection:
     with connection.cursor() as cursor:
-        # SQL
+        # SQL0
         cursor.execute(
             f'CREATE TABLE IF NOT EXISTS {TABLE_NAME} ('
             'id INT NOT NULL AUTO_INCREMENT, '
@@ -46,7 +48,7 @@ with connection:
                'VALUES '
                '(%(name)s, %(age)s) ')
 
-        data2 = {'name': 'Dicionario', 'age': 100}
+        data2 = {'name': 'dic', 'age': 100}
         cursor.execute(sql, data2)
     connection.commit()
 
@@ -80,14 +82,39 @@ with connection:
         cursor.executemany(sql, data4)
     connection.commit()
 
+    # UPDATE
+    with connection.cursor() as cursor:
+        # name = input("Digite um nome: ")
+        sql = (f'UPDATE {TABLE_NAME} SET nome="luiz" WHERE id = %s')
+
+        cursor.execute(sql, (1,))
+        connection.commit()
+
+        for roww in cursor.fetchall():
+            print(roww)
+
+    # DELETE
+    with connection.cursor() as cursor:
+        # name = input("Digite um nome: ")
+        sql = (f'DELETE FROM {TABLE_NAME} WHERE id = %s')
+
+        cursor.execute(sql, (4,))
+        connection.commit()
+
+        for roww in cursor.fetchall():
+            print(roww)
+
     # SELECT
     with connection.cursor() as cursor:
-        sql = (f'SELECT * FROM {TABLE_NAME} ')
-        cursor.execute(sql)
+        id_recebido = 0
+        coluna = 'id'
+        sql = (f'SELECT * FROM {TABLE_NAME} '
+               f'WHERE {coluna} > %s')
+        cursor.execute(sql, (id_recebido))
 
         row = cursor.fetchone()
         print(row)
         for row in cursor.fetchall():
-            _id, name, age = row
-            print(_id, name, age)
+            # _id, name, age = row
+            print(row)
     connection.commit()
