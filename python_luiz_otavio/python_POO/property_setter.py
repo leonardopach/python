@@ -14,12 +14,12 @@ class Caneta:
 
     @property
     def cor(self):
-        print('ESTOU NO GETTER')
+        print("ESTOU NO GETTER")
         return self._cor
 
     @cor.setter
     def cor(self, valor):
-        print('ESTOU NO SETTER')
+        print("ESTOU NO SETTER")
         print(valor)
         self._cor = valor
 
@@ -32,8 +32,8 @@ class Caneta:
         self._cor_tampa = valor
 
 
-caneta = Caneta('Azul')
-caneta.cor = 'Rosa'
-caneta.cor_tampa = 'Azul'
+caneta = Caneta("Azul")
+caneta.cor = "Rosa"
+caneta.cor_tampa = "Azul"
 print(caneta.cor)
 print(caneta.cor_tampa)

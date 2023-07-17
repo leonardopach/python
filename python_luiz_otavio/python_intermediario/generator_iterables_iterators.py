@@ -1,4 +1,5 @@
 import sys
+
 letras = ["eu", "sou", "um", "futuro", "programador"]
 iterator = iter(letras)
 while True:

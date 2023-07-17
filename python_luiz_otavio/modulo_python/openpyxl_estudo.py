@@ -4,7 +4,7 @@ from openpyxl import Workbook
 from openpyxl.worksheet.worksheet import Worksheet
 
 ROOT_FOLDER = Path(__file__).parent
-WORKBOOK_PATH = ROOT_FOLDER / 'workbook.xlsx'
+WORKBOOK_PATH = ROOT_FOLDER / "workbook.xlsx"
 
 workbook = Workbook()
 # worksheet: Worksheet = workbook.active  # type: ignore
@@ -16,11 +16,11 @@ worksheet: Worksheet = workbook["Minha Planilha"]  # type: ignore
 print(workbook.sheetnames)
 
 # Remover Planilha
-workbook.remove(workbook['Sheet'])
+workbook.remove(workbook["Sheet"])
 
-worksheet.cell(1, 1, 'Nome')
-worksheet.cell(1, 2, 'Idade')
-worksheet.cell(1, 3, 'Nota')
+worksheet.cell(1, 1, "Nome")
+worksheet.cell(1, 2, "Idade")
+worksheet.cell(1, 3, "Nota")
 
 students = [
     ["Leonardo", 25, 9.3],

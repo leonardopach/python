@@ -12,7 +12,7 @@ class Movie(TypedDict):
     budget: None | float
 
 
-string_json = '''
+string_json = """
 {
   "title": "O Senhor dos Anéis: A Sociedade do Anel",
   "original_title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -22,7 +22,7 @@ string_json = '''
   "characters": ["Frodo", "Sam", "Gandalf", "Legolas", "Boromir"],
   "budget": null
 }
-'''
+"""
 filme: Movie = json.loads(string_json)
 
 json_string = json.dumps(filme, ensure_ascii=False, indent=2)

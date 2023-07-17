@@ -9,6 +9,6 @@ print("O comentario e com #####")
     e espaço
 """
 
-'''
+"""
     Também e um docstring
-'''
+"""

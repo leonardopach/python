@@ -20,7 +20,7 @@ class Produto:
 
 
 carrinho = Carrinho()
-p1, p2 = Produto('Caneta', 1.20), Produto('Camiseta', 20)
-p3, p4 = Produto('Caderno', 1.20), Produto('Relógio', 20)
+p1, p2 = Produto("Caneta", 1.20), Produto("Camiseta", 20)
+p3, p4 = Produto("Caderno", 1.20), Produto("Relógio", 20)
 carrinho.inserir_produto(p1, p2, p3, p4)
 carrinho.listar_produtos()

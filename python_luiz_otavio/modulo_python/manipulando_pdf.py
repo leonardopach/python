@@ -5,10 +5,10 @@ from pathlib import Path
 from PyPDF2 import PdfReader, PdfWriter
 
 PASTA_RAIZ = Path(__file__).parent
-PASTA_ORIGINAIS = PASTA_RAIZ / 'pdf'
-PASTA_NOVA = PASTA_RAIZ / 'arquivos_novos'
+PASTA_ORIGINAIS = PASTA_RAIZ / "pdf"
+PASTA_NOVA = PASTA_RAIZ / "arquivos_novos"
 
-RELATORIO_BACEN = PASTA_ORIGINAIS / 'R20230707.pdf'
+RELATORIO_BACEN = PASTA_ORIGINAIS / "R20230707.pdf"
 PASTA_NOVA.mkdir(exist_ok=True)
 
 reader = PdfReader(RELATORIO_BACEN)
@@ -27,7 +27,7 @@ print(imagem0)
 
 
 writer = PdfWriter()
-with open(PASTA_NOVA / 'renata.pdf', 'wb') as fp:
+with open(PASTA_NOVA / "renata.pdf", "wb") as fp:
     for page in reader.pages:
         writer.add_page(page)
     writer.write(fp)  # type: ignore

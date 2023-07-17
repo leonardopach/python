@@ -19,7 +19,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 # Caminho para a raiz do projeto
 ROOT_FOLDER = Path(__file__).parent
 # Caminho para a pasta onde o chromedriver está
-CHROME_DRIVER_PATH = ROOT_FOLDER / 'drivers' / 'chromedriver'
+CHROME_DRIVER_PATH = ROOT_FOLDER / "drivers" / "chromedriver"
 
 
 def make_chrome_browser(*options: str) -> webdriver.Chrome:
@@ -34,15 +34,12 @@ def make_chrome_browser(*options: str) -> webdriver.Chrome:
         executable_path=str(CHROME_DRIVER_PATH),
     )
 
-    browser = webdriver.Chrome(
-        service=chrome_service,
-        options=chrome_options
-    )
+    browser = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
     return browser
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     TIME_TO_WAIT = 10
 
     # Example
@@ -51,19 +48,17 @@ if __name__ == '__main__':
     browser = make_chrome_browser(*options)
 
     # Como antes
-    browser.get('https://www.google.com')
+    browser.get("https://www.google.com")
 
     # Espere para encontrar o input
     search_input = WebDriverWait(browser, TIME_TO_WAIT).until(
-        EC.presence_of_element_located(
-            (By.NAME, 'q')
-        )
+        EC.presence_of_element_located((By.NAME, "q"))
     )
-    search_input.send_keys('Hello World!')
+    search_input.send_keys("Hello World!")
     search_input.send_keys(Keys.ENTER)
 
-    results = browser.find_element(By.ID, 'search')
-    links = results.find_elements(By.TAG_NAME, 'a')
+    results = browser.find_element(By.ID, "search")
+    links = results.find_elements(By.TAG_NAME, "a")
     links[0].click()
 
     # Dorme por 10 segundos

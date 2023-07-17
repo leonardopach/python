@@ -4,7 +4,7 @@ print(numeros)
 for numero in numeros:
     print(numero)
 
-texto = 'leonardo'.__iter__()
+texto = "leonardo".__iter__()
 print(next(texto))
 
 iterator = iter(texto)

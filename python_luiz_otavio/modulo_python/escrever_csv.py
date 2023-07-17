@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 
-CAMINHO_CSV = Path(__file__).parent / 'arquivo_escrever.csv'
+CAMINHO_CSV = Path(__file__).parent / "arquivo_escrever.csv"
 
 lista_client = [
     {"nome": "Leonardo2", "idade": 25},
@@ -11,10 +11,9 @@ lista_client = [
 ]
 
 # Dicionario
-with open(CAMINHO_CSV, 'w') as file:
+with open(CAMINHO_CSV, "w") as file:
     nome_colunhas = lista_client[0].keys()
-    escritor = csv.DictWriter(file,
-                              fieldnames=nome_colunhas)
+    escritor = csv.DictWriter(file, fieldnames=nome_colunhas)
 
     escritor.writeheader()
 
@@ -31,7 +30,7 @@ with open(CAMINHO_CSV, 'w') as file:
 #     for cliente in lista_client:
 #         escritor.writerow(cliente.values())
 
-with open(CAMINHO_CSV, 'r') as file:
+with open(CAMINHO_CSV, "r") as file:
     leitor2 = csv.DictReader(file)
 
     for linha in leitor2:

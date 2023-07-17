@@ -7,6 +7,7 @@ class Multiplicar:
         def interna(*args, **kwargs):
             resultado = func(*args, **kwargs)
             return resultado
+
         return interna
 
 

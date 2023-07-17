@@ -7,6 +7,7 @@ def criar_funcao(funcao):
         print(f"o Seu resultado foi {resultado}.")
         print("Ok, agora você foi decorada")
         return resultado
+
     return interna
 
 

@@ -3,7 +3,8 @@ from abc import ABC, abstractmethod
 
 class Log(ABC):
     @abstractmethod
-    def _log(self, msg): ...
+    def _log(self, msg):
+        ...
 
     def log_error(self, msg):
         return self._log(f"Error: {msg}")
@@ -14,7 +15,7 @@ class Log(ABC):
 
 class LogPrintMixin(Log):
     def _log(self, msg):
-        print(f'{msg} ({self.__class__.__name__})')
+        print(f"{msg} ({self.__class__.__name__})")
 
 
 a = LogPrintMixin()

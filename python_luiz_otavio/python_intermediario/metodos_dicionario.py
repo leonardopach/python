@@ -11,14 +11,15 @@
 # update - Atualiza um dicionário com outro
 
 import copy
+
 pessoa = {
-    'nome': 'Luiz Otávio',
-    'sobrenome': 'Miranda',
-    'idade': 900,
+    "nome": "Luiz Otávio",
+    "sobrenome": "Miranda",
+    "idade": 900,
 }
 
-pessoa.setdefault('idade', 0)
-print(pessoa['idade'])
+pessoa.setdefault("idade", 0)
+print(pessoa["idade"])
 print(len(pessoa))
 print(list(pessoa.keys()))
 print(list(pessoa.values()))
@@ -30,11 +31,7 @@ for valor in pessoa.values():
 for chave, valor in pessoa.items():
     print(chave, valor)
 
-d1 = {
-    "c1": 1,
-    "c2": 2,
-    "l1": [0, 1, 2]
-}
+d1 = {"c1": 1, "c2": 2, "l1": [0, 1, 2]}
 
 d2 = copy.deepcopy(d1)
 d2["l1"][1] = 99999

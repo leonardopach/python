@@ -1,10 +1,10 @@
-from django.urls import path
 from blog import views
+from django.urls import path
 
-app_name = 'blog'
+app_name = "blog"
 
 urlpatterns = [
-    path('', views.blog, name='home'),
-    path('post/<int:id>', views.post, name='post'),
-    path('exemplo', views.exemplo, name='exemplo'),
+    path("post/<int:post_id>/", views.post, name="post"),
+    path("", views.blog, name="home"),
+    path("exemplo", views.exemplo, name="exemplo"),
 ]

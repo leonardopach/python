@@ -1,6 +1,7 @@
 def criar_saudacao(saudacao):
     def saudar(nome):
         return f"{saudacao}, {nome}"
+
     return saudar
 
 

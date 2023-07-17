@@ -1,10 +1,10 @@
 import csv
 from pathlib import Path
 
-CAMINHO_CSV = Path(__file__).parent / 'arquivo.csv'
+CAMINHO_CSV = Path(__file__).parent / "arquivo.csv"
 
 
-with open(CAMINHO_CSV, 'r') as file:
+with open(CAMINHO_CSV, "r") as file:
     leitor2 = csv.DictReader(file)
 
     for linha in leitor2:

@@ -16,7 +16,7 @@ def saudacao(nome="ola sem nome"):
     print(nome)
 
 
-valor = 'Hello world'
+valor = "Hello world"
 imprimir(valor)
 print(somar(2, 10))
 print(somar(y=2, x=5))

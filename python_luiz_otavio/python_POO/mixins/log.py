@@ -1,6 +1,6 @@
 from pathlib import Path
 
-LOG_FILE = Path(__file__).parent / 'log.txt'
+LOG_FILE = Path(__file__).parent / "log.txt"
 
 
 class Log:
@@ -16,16 +16,16 @@ class Log:
 
 class LogFileMixin(Log):
     def _log(self, msg):
-        print(f'{msg} ({self.__class__.__name__})')
-        msg_formatada = f'{msg}({self.__class__.__name__})'
-        with open(LOG_FILE, 'a') as arquivo:
+        print(f"{msg} ({self.__class__.__name__})")
+        msg_formatada = f"{msg}({self.__class__.__name__})"
+        with open(LOG_FILE, "a") as arquivo:
             arquivo.write(msg_formatada)
             arquivo.write("\n\r")
 
 
 class LogPrintMixin(Log):
     def _log(self, msg):
-        print(f'{msg} ({self.__class__.__name__})')
+        print(f"{msg} ({self.__class__.__name__})")
 
 
 if __name__ == "__main__":

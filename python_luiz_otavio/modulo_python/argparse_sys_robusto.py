@@ -3,12 +3,14 @@ from argparse import ArgumentParser
 parser = ArgumentParser()
 
 parser.add_argument(
-    '-b', '--basic',
+    "-b",
+    "--basic",
     help="Mostra 'Olá mundo' na tela",
     type=str,
-    metavar='STRING',
+    metavar="STRING",
     default="Olá mundo",
-    nargs="+")
+    nargs="+",
+)
 args = parser.parse_args()
 
 if args.basic is None:

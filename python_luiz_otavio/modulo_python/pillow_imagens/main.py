@@ -3,8 +3,8 @@ from pathlib import Path
 from PIL import Image
 
 ROOT_FOLDER = Path(__file__).parent
-ORIGINAL = ROOT_FOLDER / 'fundo.jpg'
-NEW_IMAGE = ROOT_FOLDER / 'new.jpg'
+ORIGINAL = ROOT_FOLDER / "fundo.jpg"
+NEW_IMAGE = ROOT_FOLDER / "new.jpg"
 
 
 pil_image = Image.open(ORIGINAL)
@@ -19,6 +19,4 @@ print(new_width, new_height)
 print(width, height)
 
 new_image = pil_image.resize(size=(new_width, new_height))
-new_image.save(NEW_IMAGE,
-               optimize=True,
-               quality=50)
+new_image.save(NEW_IMAGE, optimize=True, quality=50)

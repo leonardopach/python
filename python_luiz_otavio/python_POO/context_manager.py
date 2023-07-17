@@ -1,4 +1,4 @@
-class MyOpen():
+class MyOpen:
     def __init__(self, caminho_arquivo, modo) -> None:
         self.caminho_arquivo = caminho_arquivo
         self.modo = modo
@@ -17,7 +17,7 @@ class MyOpen():
         # return True
 
 
-with MyOpen("arquivo_context_manager.txt", 'w') as arquivo:
+with MyOpen("arquivo_context_manager.txt", "w") as arquivo:
     arquivo.write("Linha 1 \n")
     arquivo.write("Linha 2 \n")
     arquivo.write("Linha 3 \n")

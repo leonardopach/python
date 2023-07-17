@@ -1,4 +1,5 @@
 import os
+
 caminho_arquivo = "/home/leonardopach/python/"
 caminho_arquivo += "modoAbertura.txt"
 

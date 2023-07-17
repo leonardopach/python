@@ -13,7 +13,7 @@ print("divisao: ", divisao)
 divisao_inteira = 10 // 2.2
 print("divisao inteira: ", divisao_inteira)
 
-exponenciacao = 2 ** 10
+exponenciacao = 2**10
 print("Exponenciação: ", exponenciacao)
 
 modulo = 55 % 2

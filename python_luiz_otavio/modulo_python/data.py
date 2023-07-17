@@ -12,5 +12,5 @@ print(datastr)
 data = datetime.now()
 print(data.timestamp())
 print(datetime.fromtimestamp(1688926343.44536))
-fmt = '%d/%m/%Y'
+fmt = "%d/%m/%Y"
 print(datastr.strftime(fmt))

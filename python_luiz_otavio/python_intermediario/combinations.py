@@ -12,11 +12,7 @@ def print_iter(iterator):
 
 pessoas = ["joao", "Joana", "Luiz", "Leticia"]
 
-camisetas = [
-    ["preta", "branca"],
-    ['p', 'm'],
-    ['Masculino', 'Feminino']
-]
+camisetas = [["preta", "branca"], ["p", "m"], ["Masculino", "Feminino"]]
 
 
 print_iter((combinations(pessoas, 2)))

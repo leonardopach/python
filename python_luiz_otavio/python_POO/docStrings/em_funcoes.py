@@ -22,9 +22,7 @@ def soma(x: int | float, y: int | float) -> int | float:
 
 
 def multiplica(
-    x: int | float,
-    y: int | float,
-    z: int | float | None = None
+    x: int | float, y: int | float, z: int | float | None = None
 ) -> int | float:
     """Multiplica x, y e/ou z
     Multiplica x e y. Se z for enviado, multiplica x, y, z.

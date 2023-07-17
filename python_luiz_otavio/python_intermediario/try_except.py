@@ -1,5 +1,5 @@
 try:
-    b = '0'
+    b = "0"
     a = 10
     c = a / b
 except ZeroDivisionError:
@@ -12,4 +12,4 @@ except (TypeError, IndexError) as error:
 except Exception as e:
     print(f"Erro: {e}")
 finally:
-    print('Continua')
+    print("Continua")

@@ -4,9 +4,7 @@ from class_para_salvar_json import db, Pessoa
 arquivo = "salvando_json.json"
 
 with open(arquivo, "w") as file:
-    json.dump(db, file,
-              ensure_ascii=True,
-              indent=True)
+    json.dump(db, file, ensure_ascii=True, indent=True)
 
 
 with open(arquivo, "r") as file:

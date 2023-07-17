@@ -13,7 +13,7 @@ print(arquivo)
 print(nome_arquivo, extesao)
 print(os.path.exists("/home/leonardopach/python"))
 
-print(os.path.abspath('.'))
+print(os.path.abspath("."))
 print(os.path.basename(caminho))
 print(os.path.basename(diretorio))
 print(os.path.dirname(caminho))
@@ -26,4 +26,4 @@ for pasta in os.listdir(caminho):
     if not os.path.isdir(caminho_completo_pasta):
         continue
     for imagem in os.listdir(caminho_completo_pasta):
-        print(' ', imagem)
+        print(" ", imagem)

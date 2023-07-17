@@ -4,6 +4,7 @@ def adicionar_repr(cls):
         class_dict = self.__dict__
         class_repr = f"{class_name}({class_dict})"
         return class_repr
+
     cls.__repr__ = meu_repr
     return cls
 

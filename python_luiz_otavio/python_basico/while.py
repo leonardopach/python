@@ -1,4 +1,3 @@
-
 qtd_linhas = 5
 qtd_colunas = 5
 
@@ -14,7 +13,7 @@ while linha <= qtd_linhas:
 nome = "Leonardo pacheco"
 
 contador = 0
-novo_nome = ''
+novo_nome = ""
 while contador < len(nome):
     letra = nome[contador]
     novo_nome += f"*{letra}"

@@ -18,7 +18,8 @@ class AbstractFoo(ABC):
 
     @name.setter
     @abstractmethod
-    def name(self, name): ...
+    def name(self, name):
+        ...
 
 
 class Foo(AbstractFoo):
@@ -31,5 +32,5 @@ class Foo(AbstractFoo):
         self._name = name
 
 
-foo = Foo('Bar')
+foo = Foo("Bar")
 print(foo.name)

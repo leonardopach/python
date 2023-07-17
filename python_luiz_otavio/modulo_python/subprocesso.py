@@ -1,16 +1,18 @@
 import subprocess
 import sys
 
-cmd = ['ping', '127.0.0.1', '-c', '4']
+cmd = ["ping", "127.0.0.1", "-c", "4"]
 
 system = sys.platform
 
-if system == 'linux':
+if system == "linux":
     cmd = ["ls -lah /"]
 
 proc = subprocess.run(
-    cmd, capture_output=True,
-    text=True, encoding="utf-8",
+    cmd,
+    capture_output=True,
+    text=True,
+    encoding="utf-8",
     shell=True,
 )
 

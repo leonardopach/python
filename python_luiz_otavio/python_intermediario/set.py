@@ -1,4 +1,4 @@
-s1 = set('leonardo')
+s1 = set("leonardo")
 print(s1, type(s1))
 s2 = {"Luiz", 1, 2, 3}
 print(s2, type(s2))

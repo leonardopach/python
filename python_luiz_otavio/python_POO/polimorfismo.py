@@ -21,18 +21,19 @@ class Notificacao(ABC):
         self.mensagem = mensagem
 
     @abstractmethod
-    def enviar(self) -> bool: ...
+    def enviar(self) -> bool:
+        ...
 
 
 class NotificacaoEmail(Notificacao):
     def enviar(self) -> bool:
-        print('E-mail: enviando - ', self.mensagem)
+        print("E-mail: enviando - ", self.mensagem)
         return True
 
 
 class NotificacaoSMS(Notificacao):
     def enviar(self) -> bool:
-        print('SMS: enviando - ', self.mensagem)
+        print("SMS: enviando - ", self.mensagem)
         return False
 
 
@@ -40,13 +41,13 @@ def notificar(notificacao: Notificacao):
     notificacao_enviada = notificacao.enviar()
 
     if notificacao_enviada:
-        print('Notificação enviada')
+        print("Notificação enviada")
     else:
-        print('Notificação NÃO enviada')
+        print("Notificação NÃO enviada")
 
 
-notificacao_email = NotificacaoEmail('testando e-mail')
+notificacao_email = NotificacaoEmail("testando e-mail")
 notificar(notificacao_email)
 
-notificacao_sms = NotificacaoSMS('testando SMS')
+notificacao_sms = NotificacaoSMS("testando SMS")
 notificar(notificacao_sms)
