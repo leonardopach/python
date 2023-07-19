@@ -8,6 +8,7 @@ __pycache__
 db.sqlite3
 mysql_206
 static_files
+
 # Django #
 *.log
 *.pot
@@ -15,6 +16,9 @@ static_files
 __pycache__
 db.sqlite3
 media
+static/
+media/
+migrations/
 
 # Backup files # 
 *.bak 
