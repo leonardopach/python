@@ -6,11 +6,12 @@ from django.contrib import admin
 
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = 'id', 'first_name', 'last_name', 'phone', 'category',
+    list_display = 'id', 'first_name', 'last_name', 'phone', 'show',
     ordering = 'id',
     list_filter = 'created_date',
     search_fields = 'id', 'first_name', 'last_name',
-    list_per_page = 2
+    list_editable = 'show',
+    list_per_page = 50
     list_display_links = 'id', 'first_name',
 
 
