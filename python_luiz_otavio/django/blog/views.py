@@ -38,4 +38,5 @@ def post(request: HttpRequest, post_id: int):
 
 
 def exemplo(request):
-    return render(request, "blog/exemplo.html", {"texto": "Estamos no exemplo"})
+    return render(request, "blog/exemplo.html",
+                  {"texto": "Estamos no exemplo"})
