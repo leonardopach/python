@@ -1,5 +1,6 @@
 # flake8: noqa
 from contact.models import Contact
+from django.core.paginator import Paginator
 from django.db.models import Q
 # from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
@@ -8,11 +9,14 @@ from django.shortcuts import get_object_or_404, redirect, render
 def index(request):
     contacts = Contact.objects \
         .filter(show=True) \
-        .order_by('-id')[0:10]
+        .order_by('-id')
 
-    # print(contacts.query)
+    paginator = Paginator(contacts, 25)  # Show 25 contacts per page.
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'contacts': contacts,
+        'page_obj': page_obj,
         'site_title': 'Contatos'
     }
     return render(
@@ -36,9 +40,12 @@ def search(request):
         )\
         .order_by('-id')
 
-    # print(contacts.query)
+    paginator = Paginator(contacts, 25)  # Show 25 contacts per page.
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'contacts': contacts,
+        'page_obj': page_obj,
         'site_title': 'Contatos'
     }
     return render(
