@@ -1,11 +1,11 @@
 import os
 
-caminho_arquivo = "/home/leonardopach/python/"
+caminho_arquivo = f"/home/{os.getenv('USER')}/Desktop/python/"
 caminho_arquivo += "modoAbertura.txt"
 
 # Remover
 # os.remove(caminho_arquivo)
-os.rename(caminho_arquivo, "Nome_Alterado.txt")
+# os.rename(caminho_arquivo, "Nome_Alterado.txt")
 
 # with open(caminho_arquivo, 'w+', encoding='utf-8') as arquivo:
 #     arquivo.write("Atenção\n")
