@@ -4,6 +4,17 @@ from . import models
 
 
 class ContactForm(forms.ModelForm):
+    first_name = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "classe-a",
+                "placeholder": "Aqui veio do init",
+            }
+        ),
+        label="primeiro nome",
+        help_text="Texto de ajuda para seu usuário",
+    )
+
     class Meta:
         model = models.Contact
         fields = (
@@ -11,11 +22,11 @@ class ContactForm(forms.ModelForm):
             "last_name",
             "phone",
         )
-        widgets = {
-            "first_name": forms.TextInput(
-                attrs={"class": "class a", "placeholder": "Escreva seu primeiro nome"}
-            )
-        }
+        # widgets = {
+        #     "first_name": forms.TextInput(
+        #         attrs={"class": "class a", "placeholder": "Escreva seu primeiro nome"}
+        #     )
+        # }
 
     def clean(self):
         # cleaned_data = self.cleaned_data
