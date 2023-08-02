@@ -13,7 +13,7 @@ class ContactForm(forms.ModelForm):
         )
         widgets = {
             "first_name": forms.TextInput(
-                attrs={"class": "class a", "placeholder": "Escreva seu primeiro nome"}
+                attrs={"placeholder": "Escreva seu primeiro nome"}
             )
         }
 
