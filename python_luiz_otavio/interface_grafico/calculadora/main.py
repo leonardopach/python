@@ -12,5 +12,8 @@ if __name__ == "__main__":
     window.addWidgetToVLayout(label1)
     window.adjustFixedSize()
 
+    # icone
+    icon = QIcon()
+
     window.show()
     app.exec()

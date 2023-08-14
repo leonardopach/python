@@ -22,19 +22,11 @@ class ContactForm(forms.ModelForm):
             "last_name",
             "phone",
         )
-<<<<<<< HEAD
-        # widgets = {
-        #     "first_name": forms.TextInput(
-        #         attrs={"class": "class a", "placeholder": "Escreva seu primeiro nome"}
-        #     )
-        # }
-=======
         widgets = {
             "first_name": forms.TextInput(
                 attrs={"placeholder": "Escreva seu primeiro nome"}
             )
         }
->>>>>>> 41a59d823e4c64362409c4cee91ec396eab83fc6
 
     def clean(self):
         # cleaned_data = self.cleaned_data
